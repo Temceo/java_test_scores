@@ -23,15 +23,14 @@ public class Main {
             }
         }
 
-        while(true) {
-            if(count == maxNumber)break;
+        while (count != maxNumber) {
             System.out.print("Enter number between 0 and 100 - score " + (count + 1) + ": ");
             input = sc.nextLine();
             isValid = validateInput(input);
 
-            if(isValid) {
+            if (isValid) {
                 int number = Integer.parseInt(input);
-                if(number > -1 && number < 101) {
+                if (number > -1 && number < 101) {
                     scoreCount += number;
                     count++;
                 } else {
